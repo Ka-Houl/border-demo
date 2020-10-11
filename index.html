@@ -1,0 +1,39 @@
+<!-- https://juejin.im/post/6881546676188741645#heading-9 -->
+<!-- 方形虚线demo -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: hsl(240, 56%, 98%);
+    }
+
+    :root {
+      --blue-color: #5296f9;
+    }
+
+    .divider-grad-mask {
+      width: 100%;
+      height: 1rem;
+      background: linear-gradient(
+          90deg,
+          var(--blue-color) 0 50%,
+          transparent 0 100%
+        )
+        0 0 / 2rem 1rem;
+      mask: linear-gradient(-90deg, black, transparent);
+    }
+  </style>
+  <body>
+    <div class="divider-grad-mask"></div>
+  </body>
+</html>
